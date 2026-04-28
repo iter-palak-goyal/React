@@ -1,0 +1,94 @@
+Class Based Component
+    Uses ES6 classes.
+        import React, { Component } from "react";
+            class Demo extends Component {
+                render() {
+                return <h1>Hello</h1>;
+                }
+            }
+        export default Demo;
+
+Here we use:
+-> class keyword
+-> render() method
+-> this keyword everywhere
+
+
+Function Based Component
+    Uses JavaScript function.
+        function Demo() {
+            return <h1>Hello</h1>;
+        }
+        export default Demo;
+
+| Feature        | Class Component   | Function Component |
+| -------------- | ----------------- | ------------------ |
+| Syntax         | Complex           | Simple             |
+| State          | this.state        | useState           |
+| Lifecycle      | Lifecycle methods | useEffect          |
+| `this` keyword | Required          | Not used           |
+| Hooks          | Not usable        | Main feature       |
+| Modern React   | Old               | Recommended        |
+
+
+| Class Component       | Function Component |
+| --------------------- | ------------------ |
+| Uses `class`          | Uses `function`    |
+| Must extend Component | No need            |
+| Must use `render()`   | Direct return      |
+
+
+What is useState?
+
+useState is a React Hook used to store and update data inside a functional component.
+
+It lets a component remember values.
+Without useState → component forgets everything after render.
+
+Syntax
+const [state, setState] = useState(initialValue)
+| Part         | Meaning                  |
+| ------------ | ------------------------ |
+| state        | current value            |
+| setState     | function to update value |
+| initialValue | starting value           |
+
+import { useState } from "react";
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <>
+      <h1>{count}</h1>
+      <button onClick={() => setCount(count + 1)}>Increase</button>
+    </>
+  );
+}
+
+const [flag, setFlag] = useState(true);
+<button onClick={() => setFlag(!flag)}>
+  Toggle
+</button>
+
+Example 3 — Store String
+const [name, setName] = useState("");
+<input onChange={(e)=>setName(e.target.value)} />
+<h1>{name}</h1>
+Used in forms.
+
+Example 4 — Store Object
+const [user, setUser] = useState({
+  name: "",
+  age: 0
+});
+Update object:
+setUser(prev => ({ ...prev, name: "Srishti" }))
+Spread operator is important here.
+
+| Type    | Example          |
+| ------- | ---------------- |
+| Number  | `useState(0)`    |
+| String  | `useState("")`   |
+| Boolean | `useState(true)` |
+| Array   | `useState([])`   |
+| Object  | `useState({})`   |

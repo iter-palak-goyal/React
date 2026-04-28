@@ -1,0 +1,158 @@
+Q1. Difference between Library and Framework
+Library                                         |            Framework
+A collection of functions you call when needed	| A structure that calls your code
+You control the flow	                        | Framework controls the flow
+Flexible	                                    | Opinionated
+Used to solve specific tasks	                | Used to build complete apps
+Library: React, Lodash                          |Framework: Angular, Django, Spring
+In library we call the code, in framework the code calls us (Inversion of Control).
+
+
+Q2. Single Page App vs Multi Page App
+SPA                                        |                     MPA
+One HTML page                              |             Multiple HTML pages
+Uses client-side routing                   |             Uses server-side routing
+Fast after first load	                   |             Slow after first loader navigation
+Better UX (no reload)                      |    Page reload every click
+Example: Gmail, Facebook	               |    Example: Amazon, traditional sites
+
+
+Q3. Current Version of React (2026)
+React 19 (latest stable)
+Major highlights:
+React Compiler
+Server Components stable
+Improved hydration
+Actions & form handling
+Performance upgrades
+
+
+Q4. When we create React app using create-vite@latest
+Folder Structure
+my-app/
+ ├── node_modules
+ ├── public
+ ├── src
+ ├── index.html
+ ├── package.json
+ ├── vite.config.js
+ └── README.md
+
+public
+Static files (images, icons, fonts)
+Directly served without bundling.
+
+src (Main Folder)
+Contains entire React code.
+src/
+ ├── assets
+ ├── App.jsx
+ ├── main.jsx
+ ├── App.css
+ └── index.css
+assets:Images, SVGs, fonts.
+App.jsx:Main root component of app.
+main.jsx:Entry point of React.It connects React with DOM.
+         ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+
+index.html
+Single HTML file for SPA.
+
+vite.config.js
+Vite configuration (plugins, alias, etc.)
+
+
+Q5. create-react-app vs Vite
+CRA             |          Vite
+Old tool	    |       Modern tool
+Slow startup	|       Instant startup
+Uses Webpack	|    Uses ESBuild + Rollup
+Heavy	        |       Lightweight
+Slower build	|       Faster build
+CRA is deprecated → Vite is preferred.
+
+
+Q6. Important JavaScript Revision (ES6+)
+Must Know Topics
+let vs var vs const
+var → function scope 
+let/const → block scope 
+Arrow Function
+const add = (a,b) => a+b;
+Template Literals
+`Hello ${name}`
+Destructuring
+const {name,age} = user;
+
+Function remembers outer variables.
+Hoisting 
+Variables/functions moved to top.
+Event Loop 
+Handles async tasks.
+Callbacks / Promises / Async await difference 
+
+
+Q7. ESBuild vs Rollup vs Rolldown
+ESBuild
+Written in Go
+Extremely fast bundler
+Used in Vite dev server
+
+Rollup
+Production bundler
+Tree-shaking best
+Used for final build
+
+Rolldown
+New Rust-based Rollup replacement
+Faster builds
+Future of Vite builds
+
+Vite uses:
+Dev → ESBuild
+Production → Rollup/Rolldown
+
+
+O8. React Reconciliation Process
+Reconciliation =Process of updating the DOM efficiently.
+Steps:
+State changes
+New Virtual DOM created
+Compare with old VDOM
+Find differences
+Update only changed parts in real DOM
+Goal → Minimum DOM operations
+
+
+Q9Virtual DOM (VDOM)
+Lightweight copy of real DOM (JavaScript object).
+Why needed?
+Real DOM updates are slow.
+Process:State change → VDOM update → Diff → Real DOM update
+Benefits:
+Fast rendering
+Better performance
+Less reflow/repaint
+
+
+O10. Diffing Algorithm
+React compares old vs new VDOM.
+Rules React assumes:
+Different element type → replace entire node
+Same type → update attributes only
+Lists use keys to track items
+Example:
+<li key={id}>Item</li>
+Keys help React identify:
+Added
+Removed
+Reordered items
+
+
+Q11. Rules of JSX
+Rule 1: Return single parent element
+Rule 2: HTML in lowercase
+Rule 3: Close all tags
+Rule 4: Custom Tags should be in CamelCase 
+Rule 5: JS inside {}
+Rule 6: We should not use the JS Keywords in the JSX

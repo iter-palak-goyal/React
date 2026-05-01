@@ -1,0 +1,11 @@
+{
+  "products": [
+    {
+      "name": "Updated Product",
+      "friend": "JS",
+      "id": "3L9zIN4PUOg"
+    }
+  ],
+  "users": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

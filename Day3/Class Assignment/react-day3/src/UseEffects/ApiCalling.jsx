@@ -1,8 +1,10 @@
 import React, { Fragment, useEffect, useState } from "react";
 
 const ApiCalling = () => {
+
   //useEffect is a Hook that we use to handle the side Effecr (Asynchronous process)
   //it will accept 2 parameters, first one will will be a calllback function, and second one is dependency array(array)
+
   let [apiData, setApiData] = useState([]);
   useEffect(() => {
     (async () => {
@@ -13,8 +15,11 @@ const ApiCalling = () => {
       setApiData([...data]);
     })();
   }, []);
+  
   return (
+
     // <div>api calling </div>
+
     <div style={{ display: "flex", flexWrap: "wrap", gap: "20px" }}>
       {apiData.map((v) => (
         <Fragment key={v.id}>

@@ -1,0 +1,56 @@
+{
+  "products": [
+    {
+      "name": "JAY",
+      "friend": "Veeru",
+      "id": "rZ9PPY20m64"
+    },
+    {
+      "name": "JAY",
+      "friend": "Veeru",
+      "id": "dS2lGkNOiw8"
+    },
+    {
+      "name": "JAY",
+      "friend": "Veeru",
+      "id": "auyRVOUVvg8"
+    },
+    {
+      "name": "JAY",
+      "friend": "Veeru",
+      "id": "t6wltq-d07Q"
+    },
+    {
+      "name": "JAY",
+      "friend": "Veeru",
+      "id": "mA7bKk_HIZQ"
+    },
+    {
+      "name": "JAY",
+      "friend": "Veeru",
+      "id": "IglLXacpxbI"
+    },
+    {
+      "name": "JAY",
+      "friend": "Veeru",
+      "id": "NMFRXN0jVkk"
+    },
+    {
+      "name": "JAY",
+      "friend": "Veeru",
+      "id": "eXFM-DHH9BE"
+    },
+    {
+      "name": "JAY",
+      "friend": "Veeru",
+      "id": "skXm_ciZbiM"
+    },
+    {
+      "name": "JAY",
+      "friend": "Veeru",
+      "id": "paFZMYIEBXQ"
+    }
+  ],
+  "users": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}

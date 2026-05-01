@@ -1,0 +1,27 @@
+UI -> useDispatch -> Dispatch -> Action -> (action.type) -> Reducer -> Update store -> Store -> Provider+ useSelector
+
+
+npm i reduxjs/toolkit
+this will give us two new things:
+1. ConfirgureStore( {
+  redux {
+    count: countReducer
+  }
+})
+2. Slice: 
+createSlice( {
+  name: "object",
+  initialState: {},
+  reducer: {},
+  extraReducer;  //for api handling & asynchronous
+})
+
+
+1. library vs framework
+2. probs and why immutable
+3. why prev in states
+4. globa css and inline css
+5. css module
+6. class based and function based
+7. redux vs context api
+8. redux tool kit
